@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Due Subjects - Bees ERP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="images/beeslogo.png" sizes="32x32">
+
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #f0f0f0;
+            font-size: 13px;
+        }
+
+        /* Top Navbar */
+        .top-navbar {
+            background: #1a1a5e;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 12px;
+            height: 42px;
+        }
+
+        .top-navbar .left-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .top-navbar .left-section img {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .top-navbar .left-section span {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .top-navbar .right-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .welcome-box {
+            border: 1px solid #aaa;
+            padding: 3px 10px;
+            font-size: 11px;
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-icon {
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Pink Banner */
+        .pink-banner {
+            background: linear-gradient(to right, #e91e63, #ec407a);
+            color: #fff;
+            text-align: center;
+            padding: 5px 10px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .page-header h4 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .breadcrumb-text {
+            padding: 0 15px 6px;
+            font-size: 12px;
+            color: #d32f2f;
+        }
+
+        .breadcrumb-text a {
+            color: #d32f2f;
+            text-decoration: none;
+        }
+
+        .btn-back {
+            background: #e53935;
+            color: #fff;
+            border: none;
+            padding: 5px 18px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            background: #c62828;
+        }
+
+        /* Student Details Panel */
+        .panel {
+            margin: 0 15px 15px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+        }
+
+        .panel-heading {
+            background: linear-gradient(to bottom, #3f51b5, #303f9f);
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 0;
+        }
+
+        .panel-body {
+            padding: 12px 15px;
+            background: #fff;
+        }
+
+        .detail-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .detail-group {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            color: #1a237e;
+            font-weight: 600;
+            min-width: 65px;
+        }
+
+        .detail-value {
+            border: 1px solid #ccc;
+            padding: 4px 10px;
+            font-size: 12px;
+            background: #f5f5f5;
+            color: #333;
+            min-width: 150px;
+            margin-left: 5px;
+        }
+
+        /* Due Subjects Table */
+        .table-panel {
+            margin: 0 15px 15px;
+            border: 1px solid #ccc;
+        }
+
+        .table-panel-heading {
+            background: #fff;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .table-panel-body {
+            padding: 10px;
+            background: #fff;
+        }
+
+        .due-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        .due-table thead th {
+            background: #e8e8e8;
+            border: 1px solid #bbb;
+            padding: 4px 8px;
+            text-align: left;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .due-table tbody td {
+            border: 1px solid #ccc;
+            padding: 3px 8px;
+            color: #333;
+        }
+
+        .due-table tbody tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        /* Semester colors */
+        .sem-iiiv { color: #d32f2f; font-weight: bold; }
+        .sem-iiiv-i { color: #2e7d32; font-weight: bold; }
+        .sem-iiiiv { color: #1565c0; font-weight: bold; }
+        .sem-iviv { color: #6a1b9a; font-weight: bold; }
+
+        /* Total */
+        .total-due {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        /* Footer link */
+        .footer-link {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #eee;
+            padding: 3px 10px;
+            font-size: 11px;
+            color: #1565c0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+        <div class="left-section">
+            <img src="Images/header.jpg" alt="CMR" style="border-radius:0; height:30px; width:auto; max-width:30px; object-fit:contain;">
+            <span>CMR COLLEGE OF ENGINEERING &amp; TECHNOLOGY</span>
+        </div>
+        <div class="right-section">
+            <span class="welcome-box">WELCOME JOGU TARUN TEJA ( 21H51A0562 )</span>
+            <i class="fa fa-mobile nav-icon" style="font-size:20px;"></i>
+            <i class="fa fa-user nav-icon"></i>
+        </div>
+    </div>
+
+    <!-- Pink Banner -->
+    <div class="pink-banner">
+        Welcome to Bees ERP : Click on any of the Modules to Start with your ERP Solutions
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h4>DueSubjects</h4>
+        <button class="btn-back" onclick="window.location.href='index.html'">Back</button>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-text">
+        You are Here : <a href="#">Examination Cell</a> &gt;&gt; <a href="#">Due Subjects</a>
+    </div>
+
+    <!-- Student Details Panel -->
+    <div class="panel">
+        <div class="panel-heading">Student Details</div>
+        <div class="panel-body">
+            <div class="detail-row">
+                <div class="detail-group">
+                    <span class="detail-label">H.T No:</span>
+                    <span class="detail-value">21H51A0562</span>
+                </div>
+                <div class="detail-group">
+                    <span class="detail-label">Roll No:</span>
+                    <span class="detail-value">21H51A0562</span>
+                </div>
+                <div class="detail-group">
+                    <span class="detail-label">Program:</span>
+                    <span class="detail-value">B.TECH</span>
+                </div>
+                <div style="padding-top:4px;">
+                    <input type="checkbox" checked disabled>
+                </div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-group">
+                    <span class="detail-label">Name:</span>
+                    <span class="detail-value">JOGU TARUN TEJA</span>
+                </div>
+                <div class="detail-group">
+                    <span class="detail-label">Branch:</span>
+                    <span class="detail-value">CSE</span>
+                </div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-group">
+                    <span class="detail-label">Parent:</span>
+                    <span class="detail-value">KIRAN KUMAR JOGU</span>
+                </div>
+                <div class="detail-group">
+                    <span class="detail-label">Sem:</span>
+                    <span class="detail-value">IV/IV I SEM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Due Subjects Details -->
+    <div class="table-panel">
+        <div class="table-panel-heading">Due Subjects Details</div>
+        <div class="table-panel-body">
+            <table class="due-table">
+                <thead>
+                    <tr>
+                        <th style="width:100px;">Sem</th>
+                        <th style="width:50px;">SNo</th>
+                        <th>Subject Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sem-iiiv">II/IV II SEM</td>
+                        <td>1</td>
+                        <td>ORDINARY DIFFERENTIAL EQUATIONS & MULTIVARIABLE CALCULUS</td>
+                    </tr>
+                    <tr>
+                        <td class="sem-iiiv-i">II/IV I SEM</td>
+                        <td>1</td>
+                        <td>ANALOG & DIGITAL ELECTRONICS</td>
+                    </tr>
+                    <tr>
+                        <td class="sem-iiiv">II/IV II SEM</td>
+                        <td>1</td>
+                        <td>NUMERICAL TECHNIQUES & PROBABILITY DISTRIBUTIONS</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="total-due">Total Due Subjects: 3</div>
+        </div>
+    </div>
+
+    <!-- Footer Link -->
+    <div class="footer-link">
+        https://www.cmrcetexaminations.com/StudentLogin/Student/DueSubjects.aspx#
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

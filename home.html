@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Student Home - Bees ERP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="images/beeslogo.png" sizes="32x32">
+
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #fff;
+            font-size: 13px;
+        }
+
+        /* Top Navbar */
+        .top-navbar {
+            background: #1a3a5c;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            height: 48px;
+        }
+
+        .top-navbar .left-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .top-navbar .left-section img {
+            height: 34px;
+            width: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .top-navbar .left-section span {
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .top-navbar .right-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .welcome-box {
+            border: 1px solid #aaa;
+            padding: 3px 10px;
+            font-size: 11px;
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-icon {
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .nav-avatar {
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Main Content */
+        .main-content {
+            border: 2px solid #1a3a5c;
+            margin: 0;
+            min-height: calc(100vh - 48px);
+            background: #fff;
+        }
+
+        /* Click Here Panel */
+        .click-panel {
+            margin: 15px;
+            max-width: 320px;
+            border: 1px solid #ccc;
+        }
+
+        .click-panel-header {
+            background: #2e7d32;
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .click-panel-body {
+            padding: 8px 12px;
+            border-top: 1px solid #ccc;
+        }
+
+        .click-panel-body a {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 3px;
+            text-decoration: none;
+        }
+
+        .click-panel-body a.marks-link {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        .click-panel-body a.dashboard-link {
+            color: #1565c0;
+        }
+
+        .click-panel-body a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+        <div class="left-section">
+            <img src="Images/header.jpg" alt="CMR" style="border-radius:50%; object-fit:contain; background:#fff;">
+            <span>CMR COLLEGE OF ENGINEERING &amp; TECHNOLOGY</span>
+        </div>
+        <div class="right-section">
+            <span class="welcome-box">WELCOME 21H51A0562</span>
+            <i class="fa fa-mobile nav-icon" style="font-size:20px;"></i>
+            <img src="Images/avatar2.png" alt="" class="nav-avatar">
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+
+        <!-- Click Here Panel -->
+        <div class="click-panel">
+            <div class="click-panel-header">CLICK HERE</div>
+            <div class="click-panel-body">
+                <a href="overallmarks.html" class="marks-link">Click Here to go Overall Marks Result</a>
+                <a href="dashboard.html" class="dashboard-link">Click Here to go Student Dashbord</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bees Erp Login</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!--Css files-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="images/beeslogo.png" sizes="32x32">
+
+    <style>
+        body, html {
+            font-family: 'Arial Rounded MT', Arial, sans-serif;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bg_img {
+            background-image: url("Images/bgimage3.png");
+            background-position: center;
+            background-size: cover;
+            min-height: 100%;
+            background-repeat: no-repeat;
+        }
+
+        input#ImgUserPhoto {
+            border-radius: 50%;
+            width: 22%;
+            margin-bottom: 20px;
+            margin-left: 13%;
+        }
+
+        .college_codfe {
+            width: 105%;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            margin-top: 14%;
+        }
+
+        .form-right {
+            margin-top: 5%;
+        }
+
+        .next_button {
+            width: 105%;
+        }
+
+        img#logo {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .bg_img {
+                background-image: url("Images/bgimage3.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .card-container.card {
+            max-width: 650px;
+            padding: 20px 30px;
+        }
+
+        .card {
+            background-color: #F7F7F7;
+            padding: 10px 15px 20px;
+            margin: 0 auto 25px;
+            margin-top: 50px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 20px;
+            -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        #Image2 {
+            width: 100% !important;
+            object-fit: contain;
+        }
+
+        @media only screen and (max-width:320px) {
+            .card-container.card {
+                margin-top: 0;
+                height: 700px;
+                display: flex;
+                border-radius: 0;
+                background-image: url("Images/pattern.jpg");
+                background-repeat: repeat;
+            }
+
+            .footer {
+                color: darkblue;
+            }
+        }
+
+        @media only screen and (max-width: 420px) {
+            #Image1 {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            #Image1 {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container-fluid bg_img">
+        <span>
+            <img id="Image1" alt="" src="Images/Beeslogo2.png" style="height:90px;width:100px;border-width:0px;position: absolute; right: 5px; border-radius: 5px">
+        </span>
+        <div class="row ">
+            <div class="col-xl-6 col-lg-6 col-md-9 card card-container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <img id="Image2" class="mx-auto d-block img-fluid" src="Images/header.jpg" style="width:100%;border-width:0px;">
+                    </div>
+                </div>
+                <form name="ctl00" method="get" action="home.html" id="ctl00" onsubmit="window.location.href='home.html'; return false;">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 border-right text-center">
+                                <div class="links">
+
+                                    <p>
+                                        
+                                    </p>
+                                    <p>
+                                        
+                                    </p>
+                                    <p>
+                                        
+                                    </p>
+                                    <p>
+                                        
+                                    </p>
+                                    <p>
+                                        <a id="lnkStudentOfficeLogin" href="#" style="color:Blue;"> Student Office 365 Login </a>
+                                    </p>
+                                    <p>
+                                        <a id="lnkApplyOpacUrl" href="#" style="color:Blue;font-size:15px;font-weight:bold;"> OPAC </a>
+                                    </p>
+                                    <p>
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <!-- Step 1: Username -->
+                                <div class="form-right" id="step1">
+
+                                    
+                                    <div class="user_circle ">
+                                        <input type="image" name="ImgUserPhoto" id="ImgUserPhoto" class="img-rounded" src="Images/avatar2.png" style="border-width:0px;">
+                                    </div>
+                                    
+
+                                    <div class="college_codfe  input-group-prepend border-0">
+                                        <span id="lbluser" class="input-group-text"><i class="fa fa-user"></i> </span>
+                                        <input name="txtUserName" type="text" id="txtUserName" placeholder="User Name" class="form-control">
+                                    </div>
+                                    <div class="college_codfe input-group-prepend">
+                                        <span></span>
+                                    </div>
+                                    <div class="next_button">
+                                        <input type="button" name="btnNext" value="Next" id="btnNext" class="btn btn-primary btn-md btn-block" onclick="showPasswordStep()">
+                                    </div>
+                                    <p id="emailHelp" class="form-text text-muted"></p>
+                                    <span id="lblWarning" class="MessageLabelRed" style="color:Red;"></span>
+                                </div>
+
+                                <!-- Step 2: Password -->
+                                <div class="form-right" id="step2" style="display:none;">
+
+                                    <div style="text-align:left; margin-bottom:5px;">
+                                        <a href="#" onclick="showUsernameStep(); return false;" style="font-size:20px; color:#333; text-decoration:none;">&larr;</a>
+                                    </div>
+                                    <div class="user_circle" style="margin-bottom:15px;">
+                                        <img src="Images/avatar2.png" alt="Submit" style="border-radius:50%; width:22%; margin-bottom:5px;">
+                                    </div>
+
+                                    <div class="college_codfe input-group-prepend border-0">
+                                        <span class="input-group-text"><i class="fa fa-lock"></i> </span>
+                                        <input name="txtPassword" type="password" id="txtPassword" placeholder="Enter Password" class="form-control">
+                                    </div>
+                                    <div class="next_button">
+                                        <input type="submit" name="btnSubmit" value="Submit" id="btnSubmit" class="btn btn-primary btn-md btn-block">
+                                    </div>
+                                    <p style="margin-top:10px;">
+                                        <a href="#" style="color:Blue; font-size:13px;">Forgot Your Password?</a>
+                                    </p>
+                                    <p>
+                                        <a href="#" style="color:Blue; font-size:13px;">Reset Password</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="container-fluid footer bg-warning">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 p-1">
+                                    Copyright &copy; 2020 BeeS Software Solutions Pvt. Ltd.
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Js files-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function checkcapslockon(e) {
+            var charKeyCode = e.keyCode ? e.keyCode : e.which;
+            var shiftKey = e.shiftKey ? e.shiftKey : ((charKeyCode == 16) ? true : false);
+            if (((charKeyCode >= 65 && charKeyCode <= 90) && !shiftKey) || ((charKeyCode >= 97 && charKeyCode <= 122) && shiftKey)) {
+                document.getElementById('capsWarningDiv').style.visibility = 'visible';
+            }
+            else {
+                document.getElementById('capsWarningDiv').style.visibility = 'hidden';
+            }
+        }
+
+        function showPasswordStep() {
+            var username = document.getElementById('txtUserName').value.trim();
+            if (username === '') {
+                document.getElementById('lblWarning').innerText = 'Please enter User Name';
+                return;
+            }
+            document.getElementById('lblWarning').innerText = '';
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+            document.getElementById('txtPassword').focus();
+        }
+
+        function showUsernameStep() {
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step1').style.display = 'block';
+            document.getElementById('txtUserName').focus();
+        }
+    </script>
+
+</body>
+</html>

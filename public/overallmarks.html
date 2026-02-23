@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://www.cmrcetexaminations.com/StudentLogin/Student/overallMarks.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Student Login
+</title><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><link href="./Student Login_files/ERP.css" rel="stylesheet"><link href="./Student Login_files/form.css" rel="stylesheet" type="text/css">
+   
+     <!--Changes as on 19-12-2020-->
+  <link rel="stylesheet" href="./Student Login_files/bootstrap.css"><link rel="stylesheet" href="./Student Login_files/style.css"><link rel="stylesheet" href="./Student Login_files/font-awesome.min.css"><link rel="stylesheet" href="./Student Login_files/font-awesome(1).min.css">
+   <script src="./Student Login_files/jquery-1.8.0.min.js.download"></script>
+   <script src="./Student Login_files/popper.min.js.download"></script>
+   <script src="./Student Login_files/bootstrap.min.js.download"></script>
+   <script src="./Student Login_files/ckeditor.js.download"></script><style>.cke{visibility:hidden;}</style>
+
+		<!-- Main css -->
+	<link rel="stylesheet" href="./Student Login_files/bootstrap.min.css">
+		
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" type="text/css" href="./Student Login_files/style(1).css"><link href="./Student Login_files/menunotifications.css" rel="stylesheet">
+		<!-- Main css -->
+		<link rel="stylesheet" href="./Student Login_files/main.css"><link rel="stylesheet" href="./Student Login_files/daterange.css">
+        <!--Changes-->
+    <link rel="shortcut icon" type="image/png" href="https://www.cmrcetexaminations.com/images/beeslogo.png" sizes="32x32">
+       <script type="text/javascript">
+
+           function isNumberKeywithDecimal(evt) {
+               var charCode = (evt.which) ? evt.which : event.keyCode;
+               if (charCode != 46 && charCode > 31
+               && (charCode < 48 || charCode > 57))
+                   return false;
+
+               return true;
+           }
+
+           function isNumberKey(evt) {
+               var charCode = (evt.which) ? evt.which : event.keyCode;
+               if ((charCode >= 48 && charCode <= 57) || charCode == 8)
+                   return true;
+
+               return false;
+           }
+
+           function AlphaNumeric(evt) {
+               var theEvent = evt || window.event;
+               var key = theEvent.keyCode || theEvent.which;
+               key = String.fromCharCode(key);
+               var regex = /^[0-9ANA\b]+$/;
+               if (!regex.test(key)) {
+                   theEvent.returnValue = false;
+                   if (theEvent.preventDefault) theEvent.preventDefault();
+               }
+           }
+
+
+           top.window.moveTo(0, 0);
+           if (document.all) {
+               top.window.resizeTo(screen.availWidth, screen.availHeight);
+           }
+           else if (document.layers || document.getElementById) {
+               if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+
+                   top.window.outerHeight = screen.availHeight;
+                   top.window.outerWidth = screen.availWidth;
+               }
+           }
+
+           function noBack() { window.history.forward(); }
+           noBack();
+           window.onload = noBack;
+           window.onpageshow = function (evt) { if (evt.persisted) noBack(); }
+           window.onunload = function () { void (0); }
+
+           function cancelBack() {
+               if ((event.keyCode == 8 ||
+                  (event.keyCode == 37 && event.altKey) ||
+                  (event.keyCode == 39 && event.altKey))
+                   &&
+                  (event.srcElement.form == null || event.srcElement.isTextEdit == false)
+                 ) {
+                   event.cancelBubble = true;
+                   event.returnValue = false;
+               }
+           }
+           function allownumbers(e) {
+               var key = window.event ? e.keyCode : e.which;
+               var keychar = String.fromCharCode(key);
+               var reg = new RegExp("[0-9]")
+               if (key == 8) {
+                   keychar = String.fromCharCode(key);
+               }
+               if (key == 46) {
+                   keychar = String.fromCharCode(key);
+               }
+               return reg.test(keychar);
+           }
+
+           function allowdate(e) {
+               var key = window.event ? e.keyCode : e.which;
+               var keychar = String.fromCharCode(key);
+               var reg = new RegExp("[0-9/]")
+               if (key == 8) {
+                   keychar = String.fromCharCode(key);
+               }
+               if (key == 46) {
+
+                   keychar = String.fromCharCode(key);
+               }
+               return reg.test(keychar);
+           }
+
+
+           function allownumbersdec(e) {
+               var key = window.event ? e.keyCode : e.which;
+               var keychar = String.fromCharCode(key);
+               var reg = new RegExp("[0-9.]")
+               if (key == 8) {
+                   keychar = String.fromCharCode(key);
+               }
+               if (key == 46) {
+                   keychar = String.fromCharCode(key);
+               }
+               return reg.test(keychar);
+           }
+
+           document.onkeydown = function inspectelement(e) {
+               if (event.keyCode == 123) {
+                   return false;
+               }
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                   return false;
+               }
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                   return false;
+               }
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                   return false;
+               }
+               if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                   return false;
+               }
+           }
+
+
+
+           document.onmousedown = disableRightclick;
+           var message = "Sorry ! Right Click No Access.";
+           function disableRightclick(evt) {
+               if (evt.button == 2) {
+                   alert(message);
+                   return false;
+               }
+           }
+       </script>
+
+</head>
+
+    <body style="width:100%; margin-bottom:10px;margin:0px;padding :0px; ">
+         <div class="container-fluid no-gutters p-0 bg-transparent">
+        <form name="aspnetForm" method="post" action="https://www.cmrcetexaminations.com/StudentLogin/Student/overallMarks.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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CB8IBQ5DcmVkaXRzRXhjbHVkZR8JBQ5DcmVkaXRzRXhjbHVkZR8KBQ5DcmVkaXRzRXhjbHVkZR8LaDwrAAQBABYIHwgFB0NyZWRpdHMfCQUHQ3JlZGl0cx8KBQdDcmVkaXRzHwtoPCsABAEAFggfCAUKQWN0Q3JlZGl0cx8JBQpBY3RDcmVkaXRzHwoFCkFjdENyZWRpdHMfC2g8KwAEAQAWCB8IBQZTdGF0dXMfCQUGU3RhdHVzHwoFBlN0YXR1cx8LaDwrAAQBABYIHwgFBFBlcmMfCQUEUGVyYx8KBQRQZXJjHwtoZAIIDzwrAAsBChQrABs8KwAEAQAWCB8IBQVTLk5vLh8JBQVTLk5vLh8KBQVTLk5vLh8LaDwrAAQBABYIHwgFBENvZGUfCQUEQ29kZR8KBQRDb2RlHwtoPCsABAEAFggfCAUHU3ViamVjdB8JBQdTdWJqZWN0HwoFB1N1YmplY3QfC2g8KwAEAQAWCB8IBQNDaDEfCQUDQ2gxHwoFA0NoMR8LaDwrAAQBABYIHwgFA0NoMh8JBQNDaDIfCgUDQ2gyHwtoPCsABAEAFggfCAUDQ2gzHwkFA0NoMx8KBQNDaDMfC2g8KwAEAQAWCB8IBQNDaDQfCQUDQ2g0HwoFA0NoNB8LaDwrAAQBABYIHwgFA0NoNR8JBQNDaDUfCgUDQ2g1HwtoPCsABAEAFggfCAUDQ2g2HwkFA0NoNh8KBQNDaDYfC2g8KwAEAQAWCB8IBQNDaDcfCQUDQ2g3HwoFA0NoNx8LaDwrAAQBABYIHwgFA0NoOB8JBQNDaDgfCgUDQ2g4HwtoPCsABAEAFggfCAUDQ2g5HwkFA0NoOR8KBQNDaDkfC2g8KwAEAQAWCB8IBQRDaDEwHwkFBENoMTAfCgUEQ2gxMB8LaDwrAAQBABYIHwgFBENoMTEfCQUEQ2gxMR8KBQRDaDExHwtoPCsABAEAFggfCAUEQ2gxMh8JBQRDaDEyHwoFBENoMTIfC2g8KwAEAQAWCB8IBQRDaDEzHwkFBENoMTMfCgUEQ2gxMx8LaDwrAAQBABYIHwgFBENoMTQfCQUEQ2gxNB8KBQRDaDE0HwtoPCsABAEAFggfCAUEQ2gxNh8JBQRDaDE2HwoFBENoMTYfC2g8KwAEAQAWCB8IBQRDaDE3HwkFBENoMTcfCgUEQ2gxNx8LaDwrAAQBABYIHwgFBENoMTgfCQUEQ2gxOB8KBQRDaDE4HwtoPCsABAEAFggfCAUEQ2gxOR8JBQRDaDE5HwoFBENoMTkfC2g8KwAEAQAWCB8IBQRDaDIwHwkFBENoMjAfCgUEQ2gyMB8LaDwrAAQBABYIHwgFDkNyZWRpdHNFeGNsdWRlHwkFDkNyZWRpdHNFeGNsdWRlHwoFDkNyZWRpdHNFeGNsdWRlHwtoPCsABAEAFggfCAUHQ3JlZGl0cx8JBQdDcmVkaXRzHwoFB0NyZWRpdHMfC2g8KwAEAQAWCB8IBQpBY3RDcmVkaXRzHwkFCkFjdENyZWRpdHMfCgUKQWN0Q3JlZGl0cx8LaDwrAAQBABYIHwgFBlN0YXR1cx8JBQZTdGF0dXMfCgUGU3RhdHVzHwtoPCsABAEAFggfCAUEUGVyYx8JBQRQZXJjHwoFBFBlcmMfC2hkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBSZjdGwwMCRjcEhlYWRlciR1Y1N0dWRDb3JuZXIkSW1nU3R1ZFBpYxF1/OcmiZDoXplR1CAfXxxIug7GpqgAl8U33nIc1DON">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1CE70C95">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAhmA0NYBDwtN7LdiYkY60hL157JmKbxcyTu1gBK6pqO7xXHvgMNYH5Uw94w4ZDnPRnd30xGKNHslLOPsSdBPwxMXkGqg31ZMWclYVZqFXePZrdvtTT5BncfS5oUcsuFhBgiIcsb0JYaiJYpvih7iNnNl7mO+HXXomii3aJZvVY1okW+6FW1JE98mvAmJ6wZgeSMC9wBO8O1werbuwsO6sLh">
+</div>
+            <table style="vertical-align:top;height:0px;width:100%;">
+                
+                <tbody><tr>
+                    <td>
+                        
+   
+
+
+
+    <title>StudMenus</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+
+
+
+    <link rel="stylesheet" href="./Student Login_files/bootstrap(1).min.css">
+    <link href="./Student Login_files/menunotifications(1).css" rel="stylesheet">
+    <!--Font Awesome icon-->
+    <script src="./Student Login_files/9c940d259e.js.download" crossorigin="anonymous"></script>
+
+    <!--Font Awesome icon-->
+    
+
+
+    <style type="text/css">
+        /*a.specialLinkButton
+        {
+         color:black;
+         text-decoration:none;
+         font-weight: normal;
+         font-family:arial;
+         font-size: 10px;*/
+        /*width: 170px;*/
+        /*}
+        a.specialLinkButton:hover 
+        {
+         color:black;
+         text-decoration:none;
+         font-weight: bold;
+         background-color :#f87213;
+          font-weight: normal;
+         font-family:arial;
+         font-size: 10px;
+         display :block;*/
+        /*padding-left:5px;
+         padding-right:5px;
+         padding-bottom:5px;
+         padding-top:5px;*/
+
+        /*width: 170px;*/
+        /*}*/
+        body, html {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 31px;
+            border: none;
+            background: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 205px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            height: 250px;
+            left: -170px;
+            top: 60px;
+            padding: 30px 23px;
+            line-height: 25px;
+            text-align: justify;
+        }
+
+            .dropdown-content a {
+                color: blue;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .check_boxes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upload_student {
+            border: 1px solid;
+            padding: 20px;
+            margin-top: 40px;
+            background: #fbfdff;
+        }
+
+        .import_student {
+            background: #fffcfd;
+            padding: 20px;
+            border: 1px solid;
+        }
+
+        .indication {
+            color: red;
+            font-weight: 600;
+        }
+
+        @media screen and (min-width: 300px) {
+            .collegename {
+                font-size: 12px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .collegename {
+                font-size: 14px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .collegename {
+                font-size: 16px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            .collegename {
+                font-size: 16px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        .studentname {
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 2px 6px 2px 6px;
+            text-align: center;
+            margin: auto;
+            border-radius: 5px;
+            font-size: 9px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .studentname {
+                text-decoration: none;
+                background-color: #ffffff;
+                color: #000000;
+                padding: 2px 6px 2px 6px;
+                text-align: center;
+                margin: auto;
+                border-radius: 5px;
+                font-size: 6px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .studentname {
+                text-decoration: none;
+                background-color: #ffffff;
+                color: #000000;
+                padding: 2px 6px 2px 6px;
+                text-align: center;
+                margin: auto;
+                border-radius: 5px;
+                font-size: 8px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            .studentname {
+                text-decoration: none;
+                background-color: #ffffff;
+                color: #000000;
+                padding: 2px 6px 2px 6px;
+                text-align: center;
+                margin: auto;
+                border-radius: 5px;
+                font-size: 12px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media screen and (max-width:1024px) {
+            .info {
+                margin-right: 0;
+                top: 0;
+                font-size: 10px;
+            }
+        }
+
+        .btnback {
+            border: none;
+            box-shadow: none;
+            /*background-color:#fc791e;*/
+            /*background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, rgb(255,147,38)), color-stop(1, rgb(217,109,0)));*/
+            color: white;
+            /*font-weight:bolder;*/
+            height: 40px;
+            /*width:170px;*/
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .alert-primary {
+            background-color: #292d53;
+            color: #ffffff;
+        }
+
+        .header {
+            width: 65%;
+            align-items: center;
+            height: auto;
+        }
+    </style>
+
+
+
+    <!-- NAVBAR-->
+
+    <div class="container-fluid p-0">
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-sm  navbar-light" style="background-color: #036;">
+                <a class="navbar-brand" href="https://www.cmrcetexaminations.com/StudentLogin/Student/overallMarks.aspx#">
+                    <img id="ctl00_cpHeader_ucStudCorner_Image3" class="user-avatar-md rounded-circle" src="./Student Login_files/logo.jpg" style="border-width:0px;">
+                    
+                    <span id="ctl00_cpHeader_ucStudCorner_lblCollegeName" class="collegename" style="color:#FFFFFF;font-family:Arial;font-size:16pt;font-weight:bold;text-transform: initial; text-shadow: 2px 2px 4px #000000;">CMR COLLEGE OF ENGINEERING &amp; TECHNOLOGY</span>
+
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent" style="align-items: center">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+
+                        <li>
+
+                            <span id="ctl00_cpHeader_ucStudCorner_lblStudentName" class="studentname mb-5" style="font-weight:bold;">WELCOME       JOGU TARUN TEJA  ( 21H51A0562  )  </span>
+                            <div class="dropdown">
+                                
+
+                                <button class="dropbtn info"><i class="fas fa-info-circle"></i></button>
+                                <div class="dropdown-content">
+                                    <span>
+                                        <span id="ctl00_cpHeader_ucStudCorner_lblStudentStatus" style="font-weight:bold;">B.TECH, CSE, IV/IV I SEM,2021 - 2022</span></span><br>
+                                    <span>
+                                        <img id="ctl00_cpHeader_ucStudCorner_imgNowDate" src="./Student Login_files/time.png" style="height:20px;width:20px;border-width:0px;">
+                                    </span>
+                                    <span>
+                                        <span id="ctl00_cpHeader_ucStudCorner_lblNowDate">2026-02-23 08:28:17 AM</span></span><br>
+                                    <span>
+                                        <span id="ctl00_cpHeader_ucStudCorner_lbllogin">Your last login @ 2 days ago</span></span>
+
+
+                                    
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--User Info-->
+
+
+                        <!--user ifo new-->
+
+                        <li>
+                            <div class="dropdown">
+
+                                <button class="dropbtn">
+                                    <input type="image" name="ctl00$cpHeader$ucStudCorner$ImgStudPic" id="ctl00_cpHeader_ucStudCorner_ImgStudPic" class="user-avatar-md rounded-circle" src="./Student Login_files/StudentPhotos.aspx" style="border-width:0px;">
+                                    
+                                </button>
+
+                                <div class="dropdown-content">
+                                    <a id="ctl00_cpHeader_ucStudCorner_lnkHome" href="javascript:__doPostBack(&#39;ctl00$cpHeader$ucStudCorner$lnkHome&#39;,&#39;&#39;)" style="text-decoration:none;"><i class="fas fa-home"></i> Home</a>
+                                    <span>
+                                        
+                                    </span>
+                                    <span>
+                                        <a id="ctl00_cpHeader_ucStudCorner_lnkCalendar" href="javascript:__doPostBack(&#39;ctl00$cpHeader$ucStudCorner$lnkCalendar&#39;,&#39;&#39;)"><i class="far fa-calendar-alt"></i> Academic Calendar</a></span>
+                                    <span>
+                                        <a id="ctl00_cpHeader_ucStudCorner_lnkChangePassword" href="javascript:__doPostBack(&#39;ctl00$cpHeader$ucStudCorner$lnkChangePassword&#39;,&#39;&#39;)" style="font-size:14px;"><i class="fas fa-key"></i> Change Password</a></span>
+                                    <span>
+                                        <a id="ctl00_cpHeader_ucStudCorner_lnkLogOut" class="specialLinkButton" href="javascript:__doPostBack(&#39;ctl00$cpHeader$ucStudCorner$lnkLogOut&#39;,&#39;&#39;)"><i class="fas fa-power-off mr-2"></i>Logout</a></span>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <!--end user-->
+
+                        <!--user end-->
+                    </ul>
+
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid scroll_text mt-3" style="background-color: #fc5185;">
+        
+        <marquee class="text-white font-weight-bold" style="text-shadow: 2px 2px 4px #000000;">Welcome to BeeS ERP : Click on any of the Modules to Start with your ERP Solutions</marquee>
+    </div>
+
+    <!--navbar end-->
+
+    
+    
+    
+    
+    
+    <table style="width: 100%;">
+        <tbody><tr>
+            <td colspan="3">
+                <table id="ctl00_cpHeader_ucStudCorner_tblMenuForms" border="0" style="width:100%;">
+	<tbody><tr id="ctl00_cpHeader_ucStudCorner_rowButtons">
+		<td id="ctl00_cpHeader_ucStudCorner_cellButtons" class="menustyleButtons" colspan="3"><div id="ctl00_cpHeader_ucStudCorner_pnlButtons" class="menustyleButtons" style="width:100%;">
+			
+                                <table id="ctl00_cpHeader_ucStudCorner_tblButtons" border="0" style="width:100%;">
+				<tbody><tr>
+					<td class="formHeadertd"><span id="ctl00_cpHeader_ucStudCorner_lblCaption" class="formHeader">Overall Marks</span></td><td id="ctl00_cpHeader_ucStudCorner_cellTransMode" class="formTranstd"></td><td id="ctl00_cpHeader_ucStudCorner_cellButtonsChild" class="formButtons"><table id="ctl00_cpHeader_ucStudCorner_tblButtonsChild" align="Right" border="0">
+						<tbody><tr class="adjust">
+							<td id="ctl00_cpHeader_ucStudCorner_cellQuit"><a id="ctl00_cpHeader_ucStudCorner_lnkQuit" class="linkbuttonquit" href="javascript:__doPostBack(&#39;ctl00$cpHeader$ucStudCorner$lnkQuit&#39;,&#39;&#39;)" style="display:inline-block;height:30px;width:100px;"><i class="fas fa-sign-out-alt"> Back </i></a></td>
+						</tr>
+					</tbody></table></td>
+				</tr>
+			</tbody></table>
+                            
+		</div></td>
+	</tr><tr id="ctl00_cpHeader_ucStudCorner_rowMessage">
+		<td><table align="Left" border="0">
+			<tbody><tr>
+				<td style="width:650px;"><span id="ctl00_cpHeader_ucStudCorner_lblCurrentPath" class="CurrentPathMessage">You are Here :  Examination Cell &gt;&gt; Overall Marks</span></td><td align="right"><span id="ctl00_cpHeader_ucStudCorner_lblMessage" class="RecordMessage"></span></td><td></td><td></td>
+			</tr>
+		</tbody></table></td>
+	</tr>
+</tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+
+
+
+   
+                    </td>
+                </tr>                          
+            </tbody></table>
+       <table style="vertical-align:top; width:100%;margin:0px;">
+                <tbody><tr>               
+                    <td style="vertical-align:top;">      
+                        <div class="ChildFormDiv">
+                        <table id="ctl00_tblMenuForms" border="0" style="height:75px;width:100%;">
+	<tbody><tr>
+		<td id="ctl00_cellFRM" class="ChildFormStyle"><div>
+			
+                                        <table style="vertical-align:top; width:100%;">
+                                            
+                                            <tbody><tr>
+                                                <td>
+                                                     
+    <div class="container-fluid mt-4">
+     <table style="text-align:center;width:100%;">
+        <tbody><tr>
+            <td>
+                <span id="ctl00_cpStud_lblWarning" class="MessageLabelRed" style="color:Red;font-size:Medium;font-weight:bold;"></span>
+            </td>
+        </tr>                                      
+     </tbody></table>
+    <div id="ctl00_cpStud_PanelDueSubjects" style="width:100%;text-align:left;">
+				
+       <table>
+           <tbody><tr>       
+                <td>                
+                    <table style="margin-left:270px;">
+                        <tbody><tr>
+                            <td style="height: 72px;">
+                                    <table class="table table-hover" align="center" width="600px" style="border-top-width: thin; border-left-width: thin; border-left-color: #3399cc; border-bottom-width: thin; border-bottom-color: #3399cc; color: #c00000; border-top-color: #3399cc; background-color: #e7edae; border-right-width: thin; border-right-color: #3399cc;">
+                                    <tbody><tr>
+                                        <td style="border-right: #999999 1px solid; border-top: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblMarksCap" style="color:#620000;font-family:arial;font-size:11pt;font-weight:normal;">CGPA:</span></td>
+                                        <td style="border-right: #999999 1px solid; border-top: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:100px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblMarks" style="color:Red;font-family:arial;font-size:11pt;font-weight:bold;"></span></td>
+                                        <td style="border-right: #999999 1px solid; border-top: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblPercentCap" style="color:#620000;font-family:arial;font-size:11pt;font-weight:normal;">Percentage :</span></td>
+                                        <td style="border-right: #999999 1px solid; border-top: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:100px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblPercent" style="color:Red;font-family:arial;font-size:11pt;font-weight:bold;"></span></td>                
+                                    </tr>                
+                                    <tr>
+                                        <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblCreditsCap" style="color:#620000;font-family:arial;font-size:11pt;font-weight:normal;">Credits Obtained</span></td>
+                                        <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblCredits" style="color:Red;font-family:arial;font-size:11pt;font-weight:bold;">149.00/160.00</span></td>
+                                        <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblDueCap" style="color:#620000;font-family:arial;font-size:11pt;font-weight:normal;">Subject Due:</span></td>
+                                        <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;"><span id="ctl00_cpStud_lblDue" style="color:Red;font-family:arial;font-size:11pt;font-weight:bold;">3/68</span></td>
+                                    </tr>                
+                                    <tr>
+                                        <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid; border-left: #999999 1px solid; border-bottom: #999999 1px solid; height:30px; width:200px; text-align:center; vertical-align:middle;" colspan="4">
+                                            <span id="ctl00_cpStud_lblGradeDet" style="color:Red;font-family:arial;font-size:6.5pt;font-weight:bold;">*Letter Grade Indicates Grade Points (O - 10.00,  A - 9.00,  B - 8.00,  C - 7.00,  D - 6.00,  P - 5.00,  F - 0.00,  AB - 0.)</span>
+                                                </td></tr><tr>
+                                                    <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid;
+                                                        border-left: #999999 1px solid; border-bottom: #999999 1px solid; height: 30px;
+                                                        width: 200px; text-align: center; vertical-align: middle;">
+                                                        <span id="ctl00_cpStud_Label1" style="color:#620000;font-family:arial;font-size:11pt;font-weight:normal;">Credits Obtained</span></td>
+                                                    <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid;
+                                                        border-left: #999999 1px solid; border-bottom: #999999 1px solid; height: 30px;
+                                                        width: 200px; text-align: center; vertical-align: middle;">
+                                                        <span id="ctl00_cpStud_Label2" style="color:Red;font-family:arial;font-size:11pt;font-weight:bold;"></span></td>
+                                                    <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid;
+                                                        border-left: #999999 1px solid; border-bottom: #999999 1px solid; height: 30px;
+                                                        width: 200px; text-align: center; vertical-align: middle;">
+                                                        <span id="ctl00_cpStud_Label3" style="color:#620000;font-family:arial;font-size:11pt;font-weight:normal;">Subject Due:</span></td>
+                                                    <td style="height: 21px; border-top: #999999 1px solid; border-right: #999999 1px solid;
+                                                        border-left: #999999 1px solid; border-bottom: #999999 1px solid; height: 30px;
+                                                        width: 200px; text-align: center; vertical-align: middle;">
+                                                        <span id="ctl00_cpStud_Label4" style="color:Red;font-family:arial;font-size:11pt;font-weight:bold;"></span></td>
+                                                </tr>
+                                                
+                                                            
+                                                    
+                                    </tbody></table>
+                            </td>
+                            <td>
+                                <input type="submit" name="ctl00$cpStud$btnExportToPDF" value="Print" id="ctl00_cpStud_btnExportToPDF" class="CreateLogins" style="font-size:Small;font-weight:bold;height:30px;">
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <table align="center">
+                        <tbody><tr>
+                            <td colspan="4">
+                                <div id="ctl00_cpStud_pnMarks" class="grid_OverallMarks" style="border-width:1px;border-style:Solid;text-align:left;">
+					
+                                <table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">I/IV I SEM</td><td align="center" style="width:45px;">April 2022</td><td align="center" style="width:45px;">September 2022</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">1</td><td style="width:80px;">A30001</td><td style="width:495px;">ENGLISH</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.00</td><td align="center">2.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30004</td><td style="width:495px;">LINEAR ALGEBRA AND CALCULUS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30011</td><td style="width:495px;">ENGINEERING CHEMISTRY</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30501</td><td style="width:495px;">PROGRAMMING FOR PROBLEM SOLVING</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30002</td><td style="width:495px;">ENGLISH LANGUAGE COMMUNICATION SKILLS LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30012</td><td style="width:495px;">ENGINEERING CHEMISTRY LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30502</td><td style="width:495px;">C PROGRAMMING LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30314</td><td style="width:495px;">ENGINEERING WORKSHOP</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">9</td><td style="width:80px;">A30020</td><td style="width:495px;">INTRODUCTION TO SOCIAL INNOVATION</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.00</td><td align="center">1.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA: 5.79 CGPA:5.79</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">19.00</td><td align="center" style="font-size:9pt;font-weight:bold;">19.00</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:9</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">I/IV II SEM</td><td align="center" style="width:45px;">September 2022</td><td align="center" style="width:45px;">March 2023</td><td align="center" style="width:45px;">January 2024</td><td align="center" style="width:100px;">July 2024</td><td align="center" style="width:100px;">January 2025</td><td align="center" style="width:100px;">June 2025</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr style="background-color:#F78686;">
+							<td style="width:25px;">1</td><td style="width:80px;">A30005</td><td style="width:495px;">ORDINARY DIFFERENTIAL EQUATIONS &amp; MULTIVARIABLE CALCULUS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">4.00</td><td align="center">F</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30009</td><td style="width:495px;">APPLIED PHYSICS</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30503</td><td style="width:495px;">DATA STRUCTURES &amp; ALGORITHMS</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30313</td><td style="width:495px;">ENGINEERING DRAWING</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.50</td><td align="center">2.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30023</td><td style="width:495px;">APPLIED PHYSICS LAB</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30504</td><td style="width:495px;">DATA STRUCTURES &amp; ALGORITHMS LAB</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30505</td><td style="width:495px;">BASIC INTERNET OF THINGS LAB</td><td align="center" style="width:45px;">A</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.00</td><td align="center">1.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30019</td><td style="width:495px;">ENGINEERING EXPLORATION &amp; PRACTICE</td><td align="center" style="width:45px;">A</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA:  CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">15.00</td><td align="center" style="font-size:9pt;font-weight:bold;">19.00</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:7 Due:1(Fail)</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">II/IV I SEM</td><td align="center" style="width:45px;">February 2023</td><td align="center" style="width:45px;">July 2023</td><td align="center" style="width:45px;">January 2024</td><td align="center" style="width:100px;">July 2024</td><td align="center" style="width:100px;">December 2024</td><td align="center" style="width:100px;">June 2025</td><td align="center" style="width:100px;">November 2025</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">1</td><td style="width:80px;">A30506</td><td style="width:495px;">DISCRETE MATHEMATICS</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="background-color:#F78686;">
+							<td style="width:25px;">2</td><td style="width:80px;">A30461</td><td style="width:495px;">ANALOG &amp; &nbsp;DIGITAL ELECTRONICS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">Ab</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">3.00</td><td align="center">F</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30513</td><td style="width:495px;">COMPUTER ORGANIZATION &amp; ARCHITECTURE</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30507</td><td style="width:495px;">OBJECT ORIENTED PROGRAMMING</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30509</td><td style="width:495px;">DATABASE MANAGEMENT SYSTEMS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30508</td><td style="width:495px;">OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.00</td><td align="center">2.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30510</td><td style="width:495px;">DATABASE MANAGEMENT SYSTEMS LAB</td><td align="center" style="width:45px;">O</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30021</td><td style="width:495px;">SOCIAL INNOVATION IN PRACTICE</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.00</td><td align="center">1.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">9</td><td style="width:80px;">A30015</td><td style="width:495px;">SOFT SKILLS &amp; PROFESSIONAL ETHICS</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA:  CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">19.50</td><td align="center" style="font-size:9pt;font-weight:bold;">22.50</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:8 Due:1(Fail)</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">II/IV II SEM</td><td align="center" style="width:45px;">July 2023</td><td align="center" style="width:45px;">January 2024</td><td align="center" style="width:45px;">July 2024</td><td align="center" style="width:100px;">December 2024</td><td align="center" style="width:100px;">June 2025</td><td align="center" style="width:100px;">November 2025</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr style="background-color:#F78686;">
+							<td style="width:25px;">1</td><td style="width:80px;">A30007</td><td style="width:495px;">NUMERICAL TECHNIQUES &amp; PROBABILITY DISTRIBUTIONS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">Ab</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">4.00</td><td align="center">F</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30511</td><td style="width:495px;">DESIGN &amp; ANALYSIS OF ALGORITHMS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30525</td><td style="width:495px;">SOFTWARE ENGINEERING</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">Ab</td><td align="center" style="width:100px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30228</td><td style="width:495px;">BASIC ELECTRICAL ENGINEERING</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30229</td><td style="width:495px;">BASIC ELECTRICAL ENGINEERING LAB</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30462</td><td style="width:495px;">ANALOG &amp; DIGITAL ELECTRONICS LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30512</td><td style="width:495px;">ALGORITHMS LAB</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30016</td><td style="width:495px;">GENDER SENSITIZATION</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA:  CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">14.50</td><td align="center" style="font-size:9pt;font-weight:bold;">18.50</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:7 Due:1(Fail)</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">III/IV I SEM</td><td align="center" style="width:45px;">January 2024</td><td align="center" style="width:45px;">June 2024</td><td align="center" style="width:45px;">December 2024</td><td align="center" style="width:100px;">June 2025</td><td align="center" style="width:100px;">November 2025</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">1</td><td style="width:80px;">A30514</td><td style="width:495px;">COMPUTER NETWORKS</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30516</td><td style="width:495px;">OPERATING SYSTEMS</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30518</td><td style="width:495px;">FORMAL LANGUAGES &amp; AUTOMATA THEORY</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30530</td><td style="width:495px;">ARTIFICIAL INTELLIGENCE</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30529</td><td style="width:495px;">SOFTWARE TESTING METHODOLOGIES</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">F</td><td align="center" style="width:100px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30515</td><td style="width:495px;">COMPUTER NETWORKS LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30517</td><td style="width:495px;">OPERATING SYSTEMS LAB</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30526</td><td style="width:495px;">MOBILE APP DEVELOPMENT LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.00</td><td align="center">2.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">9</td><td style="width:80px;">A30014</td><td style="width:495px;">ENVIRONMENTAL SCIENCES</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">10</td><td style="width:80px;">A30548</td><td style="width:495px;">MINI PROJECT-I</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA: 5.55 CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">21.00</td><td align="center" style="font-size:9pt;font-weight:bold;">21.00</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:10</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">III/IV II SEM</td><td align="center" style="width:45px;">June 2024</td><td align="center" style="width:45px;">December 2024</td><td align="center" style="width:45px;">June 2025</td><td align="center" style="width:100px;">November 2025</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">1</td><td style="width:80px;">A30523</td><td style="width:495px;">WEB TECHNOLOGIES</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.00</td><td align="center">2.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30519</td><td style="width:495px;">COMPILER DESIGN</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30521</td><td style="width:495px;">SCRIPTING LANGUAGES</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30558</td><td style="width:495px;">DATA VISUALIZATION</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">Ab</td><td align="center" style="width:45px;">F</td><td align="center" style="width:100px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30003</td><td style="width:495px;">ADVANCED ENGLISH COMMUNICATION SKILLS LAB</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30522</td><td style="width:495px;">SCRIPTING LANGUAGES LAB</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30524</td><td style="width:495px;">WEB TECHNOLOGIES LAB</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30520</td><td style="width:495px;">COMPILER DESIGN LAB</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">1.50</td><td align="center">1.50</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">9</td><td style="width:80px;">A30546</td><td style="width:495px;">TECHNICAL SEMINAR-I</td><td align="center" style="width:45px;">A</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.00</td><td align="center">2.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">10</td><td style="width:80px;">A30017</td><td style="width:495px;">INDIAN CONSTITUTION</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">11</td><td style="width:80px;">A30556</td><td style="width:495px;">CYBER SECURITY</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA: 6.08 CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">20.00</td><td align="center" style="font-size:9pt;font-weight:bold;">20.00</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:11</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">IV/IV I SEM</td><td align="center" style="width:45px;">November 2024</td><td align="center" style="width:45px;">April 2025</td><td align="center" style="width:45px;">June 2025</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">1</td><td style="width:80px;">A30013</td><td style="width:495px;">BUSINESS MANAGEMENT &amp; FINANCIAL ANALYSIS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">4.00</td><td align="center">4.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30534</td><td style="width:495px;">DESIGN PATTERNS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30539</td><td style="width:495px;">ETHICAL HACKING</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30542</td><td style="width:495px;">CLOUD COMPUTING</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30552</td><td style="width:495px;">MAJOR PROJECT PHASE-I</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">6</td><td style="width:80px;">A30160</td><td style="width:495px;">DISASTER MANAGEMENT AND MITIGATION</td><td align="center" style="width:45px;">C</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">7</td><td style="width:80px;">A30163</td><td style="width:495px;">AIR POLLUTION AND CONTROL</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">8</td><td style="width:80px;">A30549</td><td style="width:495px;">MINI PROJECT-II</td><td align="center" style="width:45px;">S</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">0.00</td><td align="center">0.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA: 6.02 CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">22.00</td><td align="center" style="font-size:9pt;font-weight:bold;">22.00</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:8</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table><table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+						<tbody><tr style="color:Black;background-color:#F9C903;">
+							<td>S.No.</td><td>Code</td><td>Subject</td><td>Ch1</td><td>Ch2</td><td>Ch3</td><td>Ch4</td><td>Ch5</td><td>Ch6</td><td>Ch7</td><td>Ch8</td><td>Ch9</td><td>Ch10</td><td>Ch11</td><td>Ch12</td><td>Ch13</td><td>Ch14</td><td>Ch16</td><td>Ch17</td><td>Ch18</td><td>Ch19</td><td>Ch20</td><td>CreditsExclude</td><td>Credits</td><td>ActCredits</td><td>Status</td><td>Perc</td>
+						</tr><tr>
+							<td style="width:25px;">&nbsp;</td><td style="width:80px;">&nbsp;</td><td style="color:Blue;font-weight:bold;width:495px;">IV/IV II SEM</td><td align="center" style="width:45px;">April 2025</td><td align="center" style="width:45px;">June 2025</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">1</td><td style="width:80px;">A30544</td><td style="width:495px;">INTERNET OF THINGS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">2</td><td style="width:80px;">A30162</td><td style="width:495px;">GREEN BUILDINGS</td><td align="center" style="width:45px;">F</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">3</td><td style="width:80px;">A30378</td><td style="width:495px;">WASTE TO ENERGY</td><td align="center" style="width:45px;">P</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">3.00</td><td align="center">3.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">4</td><td style="width:80px;">A30547</td><td style="width:495px;">TECHNICAL SEMINAR - II</td><td align="center" style="width:45px;">B</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">2.00</td><td align="center">2.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr>
+							<td style="width:25px;">5</td><td style="width:80px;">A30553</td><td style="width:495px;">MAJOR PROJECT PHASE - II</td><td align="center" style="width:45px;">Ab</td><td align="center" style="width:45px;">D</td><td align="center" style="width:45px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center" style="width:70px;">&nbsp;</td><td align="center" style="width:50px;">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">7.00</td><td align="center">7.00</td><td align="center">P</td><td align="center">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">SGPA: 5.72 CGPA:</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">18.00</td><td align="center" style="font-size:9pt;font-weight:bold;">18.00</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr><tr style="color:#620000;background-color:#E7EDAE;font-family:Arial;">
+							<td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">&nbsp;</td><td style="font-size:9pt;font-weight:bold;">Subjects Passed:5</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td><td align="center" style="font-size:9pt;font-weight:bold;">&nbsp;</td>
+						</tr>
+					</tbody></table>
+				</div>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+           </tr>
+        </tbody></table>        
+    
+			</div>
+        </div> 
+    
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    
+		</div></td>
+	</tr>
+</tbody></table>                    
+                    </div>                   
+                </td>                
+            </tr> 
+           
+        </tbody></table> 
+   </form>
+             </div>
+
+
+</body></html>
